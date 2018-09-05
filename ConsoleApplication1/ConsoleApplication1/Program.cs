@@ -30,8 +30,26 @@ namespace mod1_lab1
             Console.WriteLine("age is {0}", age);
             Console.WriteLine("{0} , {1}", firstName, lastName);
             Console.WriteLine(street + " , " + city + "," + country);
-            Console.WriteLine($"Born on {birthDate}");
+            Console.WriteLine($"Born on {birthDate} , {firstName}");
             Console.WriteLine("Born on {0}", birthDate);
+
+            Console.WriteLine("enter integer and press enter :");
+            int input = 0;
+            try
+            {
+                input = Int32.Parse(Console.ReadLine());
+            }
+            catch ( Exception e)
+            {
+                Console.WriteLine("in exception");
+            }
+
+            if ((input % 2) == 0)
+                Console.WriteLine("the number is even");
+            else
+                Console.WriteLine("the number is odd");
+
+            Console.WriteLine("press any key to exit");
             Console.ReadLine();
         }
     }
